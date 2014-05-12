@@ -1,0 +1,9 @@
+package com.event.mashup.user.repository;
+
+import com.event.mashup.user.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+
+    public User findByEmail(String email);
+}
